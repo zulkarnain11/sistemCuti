@@ -11,7 +11,7 @@
 <body>
     <div class="container">
       <div class="about">
-        <img src="image/logoktd.png" />
+        <img src="image/logoktd1.png" />
         <h1>Online Leave Management System</h1>
       </div>
       <div class="log-in">
