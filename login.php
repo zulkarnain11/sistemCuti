@@ -6,12 +6,13 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+     rel="stylesheet">
 </head>
 <body>
     <div class="container">
       <div class="about">
-        <img src="image/logoktd.png" />
+        <img src="image/logoktd1.png" />
         <h1>Online Leave Management System</h1>
       </div>
       <div class="log-in">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login Page Admin</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
@@ -11,12 +11,12 @@
 <body>
     <div class="container">
       <div class="about">
-        <img src="image/logoktd.png" />
+        <img src="image/logoktd1.png" />
         <h1>Online Leave Management System</h1>
       </div>
       <div class="log-in">
-        <form action="#" method="POST">
-            <h1>LOGIN</h1>
+        <form action="include/adminlogin.inc.php" method="POST">
+            <h1>ADMIN LOGIN</h1>
                            
             <img src="icon/user.svg" width="40px"/>
             <input type="text" name="username" placeholder="Username" autocomplete="off"/><br/>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="footer">
-
+        
     </div>
 </body>
 </html>
