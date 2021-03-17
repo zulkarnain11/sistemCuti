@@ -16,8 +16,25 @@
         <h1>Online Leave Management System</h1>
       </div>
       <div class="log-in">
-        <form action="#" method="POST">
+        <form action="include/login.inc.php" method="POST">
             <h1>LOGIN</h1>
+
+            <?php
+              if(isset($_GET["error"])){
+                if($_GET["error"]=="emptyInput"){
+                  echo "<p class='msg'>*Fill in all fields!*</p>";
+                }elseif($_GET["error"]=="passwordnotmatch"){
+                  echo "<p class='msg'>*Password not match!*</p>";
+                }elseif($_GET["error"]=="invalidUsername"){
+                  echo "<p class='msg'>*Enter a username!*</p>";
+                }elseif($_GET["error"]=="midlefinger!!!"){
+                  echo "<script>alert('Wau yakinnya kamu __|__')</script>";
+                }elseif($_GET["error"]=="inputnotmatch"){
+                  echo "<p class='msg'>*Input not match!*</p>";
+                }
+              }
+
+            ?>
                            
             <img src="icon/user.svg" width="40px"/>
             <input type="text" name="username" placeholder="Username" autocomplete="off"/><br/>

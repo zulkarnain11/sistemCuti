@@ -6,7 +6,7 @@
     <title>Login Page Admin</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -17,6 +17,18 @@
       <div class="log-in">
         <form action="include/adminlogin.inc.php" method="POST">
             <h1>ADMIN LOGIN</h1>
+
+            <?php
+              if(isset($_GET["error"])){
+                if($_GET["error"]=="emptyInput"){
+                  echo "<p class='msg'>*Fill in all fields!*</p>";
+                }elseif($_GET["error"]=="passwordnotmatch"){
+                  echo "<p class='msg'>*Password not match!*</p>";
+                }elseif($_GET["error"]=="invalidUsername"){
+                  echo "<p class='msg'>*Enter a username!*</p>";
+                }
+              }
+            ?>
                            
             <img src="icon/user.svg" width="40px"/>
             <input type="text" name="username" placeholder="Username" autocomplete="off"/><br/>

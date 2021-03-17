@@ -15,11 +15,14 @@ if (isset($_POST["submit"])){
         header("Location: ../adminlogin.php?error=invalidUsername");
         exit();
     }
+    if (notMatch($conn, $adminUser, $adminpwd) !== false){
+        header("Location: ../login.php?error=passwordnotmatch");
+    }
    
-    $sql = "SELECT * FROM admin";
+    $sql = "SELECT * FROM admin WHERE adminUsername = '$adminUser' and adminPassword = '$adminpwd';";
     $sqlrun = mysqli_query($conn, $sql);
     
-    if($row = mysqli_fetch_assoc($sqlrun)){
+    while($row = mysqli_fetch_assoc($sqlrun)){
         
         $user = $row["adminUsername"];
         $pwd = $row["adminPassword"];
